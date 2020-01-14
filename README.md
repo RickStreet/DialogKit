@@ -1,3 +1,7 @@
 # DialogKit
 
-A description of this package.
+Three functions with dialogs:
+    dialogOKCancel
+    dialogOK
+    dialogYesNo
+Than return Bool    

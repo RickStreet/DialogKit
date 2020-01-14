@@ -9,10 +9,10 @@
 import Cocoa
 
 
-public func dialogOKCancel(_ question: String, text: String) -> Bool {
+public func dialogOKCancel(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
-    myPopup.messageText = question
-    myPopup.informativeText = text
+    myPopup.messageText = message
+    myPopup.informativeText = info
     myPopup.alertStyle = NSAlert.Style.warning
     myPopup.addButton(withTitle: "OK")
     myPopup.addButton(withTitle: "Cancel")
@@ -23,10 +23,10 @@ public func dialogOKCancel(_ question: String, text: String) -> Bool {
     return false
 }
 
-public func dialogOK(_ question: String, text: String) -> Bool {
+public func dialogOK(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
-    myPopup.messageText = question
-    myPopup.informativeText = text
+    myPopup.messageText = message
+    myPopup.informativeText = info
     myPopup.alertStyle = NSAlert.Style.warning
     myPopup.addButton(withTitle: "OK")
     let res = myPopup.runModal()
@@ -36,10 +36,10 @@ public func dialogOK(_ question: String, text: String) -> Bool {
     return false
 }
 
-public func dialogYesNo(_ question: String, text: String) -> Bool {
+public func dialogYesNo(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
-    myPopup.messageText = question
-    myPopup.informativeText = text
+    myPopup.messageText = message
+    myPopup.informativeText = info
     myPopup.alertStyle = NSAlert.Style.warning
     myPopup.addButton(withTitle: "Yes")
     myPopup.addButton(withTitle: "No")
