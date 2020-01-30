@@ -8,7 +8,6 @@
 
 import Cocoa
 
-
 public func dialogOKCancel(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
