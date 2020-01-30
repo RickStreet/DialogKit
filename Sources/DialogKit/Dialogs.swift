@@ -49,7 +49,7 @@ public func dialogYesNo(_ message: String, info: String) -> Bool {
     return false
 }
 
-func dialogGetText(_ question: String, info: String) -> String {
+public func dialogGetText(_ question: String, info: String) -> String {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = question
     myPopup.informativeText = info
