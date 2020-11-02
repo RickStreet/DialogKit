@@ -8,6 +8,11 @@
 
 import Cocoa
 
+/// Dialog Ok with cancel
+/// - Parameters:
+///   - message: Short messate
+///   - info: Detalied message
+/// - Returns: true or false for cancel
 public func dialogOKCancel(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
@@ -22,6 +27,11 @@ public func dialogOKCancel(_ message: String, info: String) -> Bool {
     return false
 }
 
+/// Dialog Ok
+/// - Parameters:
+///   - message: Short Message
+///   - info: Detaliled message
+/// - Returns: true or false
 public func dialogOK(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
@@ -35,6 +45,11 @@ public func dialogOK(_ message: String, info: String) -> Bool {
     return false
 }
 
+/// Dialog Yes No
+/// - Parameters:
+///   - message: Short message
+///   - info: Detalied message
+/// - Returns: True for yes, false for no
 public func dialogYesNo(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
@@ -49,6 +64,11 @@ public func dialogYesNo(_ message: String, info: String) -> Bool {
     return false
 }
 
+/// Dialog get text
+/// - Parameters:
+///   - question: Short question
+///   - info: Detlied information
+/// - Returns: Text enterred by user, "" if nothing enterred.
 public func dialogGetText(_ question: String, info: String) -> String {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = question
