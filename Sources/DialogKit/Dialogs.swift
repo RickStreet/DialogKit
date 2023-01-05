@@ -45,6 +45,27 @@ public func dialogOK(_ message: String, info: String) -> Bool {
     return false
 }
 
+
+/// Dialog Warning
+/// - Parameters:
+///   - message: Short Message
+///   - info: Detaliled message
+/// - Returns: true or false
+public func dialogWarning(_ message: String, info: String) -> Bool {
+    let myPopup: NSAlert = NSAlert()
+    myPopup.alertStyle = .warning
+    myPopup.messageText = message
+    myPopup.informativeText = info
+    myPopup.alertStyle = NSAlert.Style.warning
+    myPopup.addButton(withTitle: "OK")
+    let res = myPopup.runModal()
+    if res == NSApplication.ModalResponse.alertFirstButtonReturn {
+        return true
+    }
+    return false
+}
+
+
 /// Dialog Yes No
 /// - Parameters:
 ///   - message: Short message
