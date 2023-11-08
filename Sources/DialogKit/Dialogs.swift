@@ -36,7 +36,7 @@ public func dialogOK(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
     myPopup.informativeText = info
-    myPopup.alertStyle = NSAlert.Style.warning
+    myPopup.alertStyle = NSAlert.Style.informational
     myPopup.addButton(withTitle: "OK")
     let res = myPopup.runModal()
     if res == NSApplication.ModalResponse.alertFirstButtonReturn {
@@ -53,7 +53,6 @@ public func dialogOK(_ message: String, info: String) -> Bool {
 /// - Returns: true or false
 public func dialogWarning(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
-    myPopup.alertStyle = .warning
     myPopup.messageText = message
     myPopup.informativeText = info
     myPopup.alertStyle = NSAlert.Style.warning
