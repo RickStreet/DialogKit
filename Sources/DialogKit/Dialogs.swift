@@ -55,8 +55,8 @@ public func dialogWarning(_ message: String, info: String) -> Bool {
     let myPopup: NSAlert = NSAlert()
     myPopup.messageText = message
     myPopup.informativeText = info
-    myPopup.alertStyle = NSAlert.Style.warning
-    myPopup.addButton(withTitle: "OK")
+    myPopup.alertStyle = .warning
+    myPopup.addButton(withTitle: "OK")    
     let res = myPopup.runModal()
     if res == NSApplication.ModalResponse.alertFirstButtonReturn {
         return true
